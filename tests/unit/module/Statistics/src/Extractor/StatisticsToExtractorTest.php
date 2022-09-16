@@ -11,12 +11,12 @@ use PHPUnit\Framework\TestCase;
  *
  * @package Tests\unit
  */
-class TestTest extends TestCase
+class StatisticsToExtractorTest extends TestCase
 {
     /**
      * @test
      */
-    public function testNothing(): void
+    public function testExtract(): void
     {
         $this->assertTrue(true);
     }
