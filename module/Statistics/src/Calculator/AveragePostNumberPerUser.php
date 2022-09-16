@@ -34,18 +34,14 @@ class AveragePostNumberPerUser extends AbstractCalculator
      */
     protected function doCalculate(): StatisticsTo
     {
-        $stats = new StatisticsTo();
+        $value = 0;
+        $userCount = count($this->totals);
 
-        foreach ($this->totals as $splitPeriod => $total) {
-            $child = (new StatisticsTo())
-                ->setName($this->parameters->getStatName())
-                ->setSplitPeriod($splitPeriod)
-                ->setValue($total)
-                ->setUnits(self::UNITS);
-
-            $stats->addChild($child);
+        if ($userCount > 0) {
+            $postsPerUser = array_sum(array_filter(array_values($this->totals)));
+            $value = $postsPerUser / $userCount;
         }
 
-        return $stats;
+        return (new StatisticsTo())->setValue(round($value, 2));
     }
 }
