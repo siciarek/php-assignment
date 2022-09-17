@@ -1,71 +1,71 @@
 
 
-Code Coverage Report:     
-  2022-09-17 09:25:26     
-                          
- Summary:                 
-  Classes:  6.25% (2/32)  
-  Methods:  3.16% (3/95)  
-  Lines:   12.06% (41/340)
+Code Coverage Report:      
+  2022-09-17 14:43:55      
+                           
+ Summary:                  
+  Classes: 50.00% (16/32)  
+  Methods: 54.74% (52/95)  
+  Lines:   69.12% (235/340)
 
 App\Config\Config
-  Methods:   0.00% ( 0/ 2)   Lines:   0.00% (  0/  9)
+  Methods: 100.00% ( 2/ 2)   Lines: 100.00% (  9/  9)
 App\Controller\Controller
-  Methods:   0.00% ( 0/ 1)   Lines:   0.00% (  0/  9)
+  Methods:   0.00% ( 0/ 1)   Lines:  88.89% (  8/  9)
 App\Controller\ErrorController
   Methods:   0.00% ( 0/ 1)   Lines:   0.00% (  0/  1)
 App\Controller\Factory\StatisticsControllerFactory
-  Methods:   0.00% ( 0/ 1)   Lines:   0.00% (  0/  3)
+  Methods: 100.00% ( 1/ 1)   Lines: 100.00% (  3/  3)
 App\Controller\IndexController
-  Methods:   0.00% ( 0/ 1)   Lines:   0.00% (  0/  6)
+  Methods: 100.00% ( 1/ 1)   Lines: 100.00% (  6/  6)
 App\Controller\StatisticsController
-  Methods:   0.00% ( 0/ 3)   Lines:   0.00% (  0/ 18)
+  Methods:  33.33% ( 1/ 3)   Lines:  77.78% ( 14/ 18)
 App\Dispatcher\RouteDispatcher
   Methods:   0.00% ( 0/ 2)   Lines:  85.00% ( 17/ 20)
 SocialPost\Cache\Factory\CacheFactory
-  Methods:   0.00% ( 0/ 2)   Lines:   0.00% (  0/  2)
+  Methods:  50.00% ( 1/ 2)   Lines:  50.00% (  1/  2)
 SocialPost\Client\Factory\FictionalClientFactory
-  Methods:   0.00% ( 0/ 2)   Lines:   0.00% (  0/ 11)
+  Methods: 100.00% ( 2/ 2)   Lines: 100.00% ( 11/ 11)
 SocialPost\Client\FictionalClient
-  Methods:   0.00% ( 0/ 6)   Lines:   0.00% (  0/ 24)
+  Methods:  66.67% ( 4/ 6)   Lines:  58.33% ( 14/ 24)
 SocialPost\Client\SocialClientCacheDecorator
   Methods:   0.00% ( 0/ 6)   Lines:   0.00% (  0/ 19)
 SocialPost\Driver\Factory\FictionalDriverFactory
-  Methods:   0.00% ( 0/ 1)   Lines:   0.00% (  0/  7)
+  Methods: 100.00% ( 1/ 1)   Lines: 100.00% (  7/  7)
 SocialPost\Driver\FictionalDriver
-  Methods:   0.00% ( 0/ 8)   Lines:   0.00% (  0/ 35)
+  Methods:  37.50% ( 3/ 8)   Lines:  68.57% ( 24/ 35)
 SocialPost\Dto\FetchParamsTo
-  Methods:   0.00% ( 0/ 3)   Lines:   0.00% (  0/  4)
+  Methods: 100.00% ( 3/ 3)   Lines: 100.00% (  4/  4)
 SocialPost\Dto\SocialPostTo
-  Methods:   0.00% ( 0/12)   Lines:   0.00% (  0/ 18)
+  Methods: 100.00% (12/12)   Lines: 100.00% ( 18/ 18)
 SocialPost\Exception\BadResponseException
   Methods:  ( 0/ 0)   Lines:  (  0/  0)
 SocialPost\Exception\InvalidTokenException
   Methods:  ( 0/ 0)   Lines:  (  0/  0)
 SocialPost\Hydrator\FictionalPostHydrator
-  Methods:   0.00% ( 0/ 2)   Lines:   0.00% (  0/ 10)
+  Methods: 100.00% ( 2/ 2)   Lines: 100.00% ( 10/ 10)
 SocialPost\Service\Factory\SocialPostServiceFactory
-  Methods:   0.00% ( 0/ 1)   Lines:   0.00% (  0/  3)
+  Methods: 100.00% ( 1/ 1)   Lines: 100.00% (  3/  3)
 SocialPost\Service\SocialPostService
-  Methods:   0.00% ( 0/ 3)   Lines:   0.00% (  0/  9)
+  Methods: 100.00% ( 3/ 3)   Lines: 100.00% (  9/  9)
 Statistics\Builder\ParamsBuilder
   Methods:   0.00% ( 0/ 1)   Lines:   0.00% (  0/ 18)
 Statistics\Calculator\AbstractCalculator
-  Methods:   0.00% ( 0/ 4)   Lines:   0.00% (  0/ 15)
+  Methods: 100.00% ( 4/ 4)   Lines: 100.00% ( 15/ 15)
 Statistics\Calculator\AveragePostLength
-  Methods:   0.00% ( 0/ 2)   Lines:   0.00% (  0/  6)
+  Methods:  50.00% ( 1/ 2)   Lines:  83.33% (  5/  6)
 Statistics\Calculator\AveragePostNumberPerUser
   Methods: 100.00% ( 2/ 2)   Lines: 100.00% (  8/  8)
 Statistics\Calculator\CalculatorComposite
-  Methods:   0.00% ( 0/ 3)   Lines:   0.00% (  0/  8)
+  Methods: 100.00% ( 3/ 3)   Lines: 100.00% (  8/  8)
 Statistics\Calculator\Factory\StatisticsCalculatorFactory
-  Methods:   0.00% ( 0/ 1)   Lines:   0.00% (  0/ 11)
+  Methods:   0.00% ( 0/ 1)   Lines:  90.91% ( 10/ 11)
 Statistics\Calculator\MaxPostLength
-  Methods:   0.00% ( 0/ 2)   Lines:   0.00% (  0/  4)
+  Methods: 100.00% ( 2/ 2)   Lines: 100.00% (  4/  4)
 Statistics\Calculator\NoopCalculator
   Methods:   0.00% ( 0/ 1)   Lines:   0.00% (  0/  1)
 Statistics\Calculator\TotalPostsPerWeek
-  Methods:   0.00% ( 0/ 2)   Lines:   0.00% (  0/ 11)
+  Methods: 100.00% ( 2/ 2)   Lines: 100.00% ( 11/ 11)
 Statistics\Dto\ParamsTo
   Methods:   0.00% ( 0/ 6)   Lines:   0.00% (  0/  9)
 Statistics\Dto\StatisticsTo
