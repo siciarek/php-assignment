@@ -1,12 +1,12 @@
 
 
 Code Coverage Report:      
-  2022-09-17 19:14:22      
+  2022-09-17 19:39:30      
                            
  Summary:                  
-  Classes: 59.38% (19/32)  
-  Methods: 60.00% (57/95)  
-  Lines:   71.18% (242/340)
+  Classes: 71.88% (23/32)  
+  Methods: 80.00% (76/95)  
+  Lines:   85.88% (292/340)
 
 App\Config\Config
   Methods: 100.00% ( 2/ 2)   Lines: 100.00% (  9/  9)
@@ -49,7 +49,7 @@ SocialPost\Service\Factory\SocialPostServiceFactory
 SocialPost\Service\SocialPostService
   Methods: 100.00% ( 3/ 3)   Lines: 100.00% (  9/  9)
 Statistics\Builder\ParamsBuilder
-  Methods:   0.00% ( 0/ 1)   Lines:   0.00% (  0/ 18)
+  Methods: 100.00% ( 1/ 1)   Lines: 100.00% ( 18/ 18)
 Statistics\Calculator\AbstractCalculator
   Methods: 100.00% ( 4/ 4)   Lines: 100.00% ( 15/ 15)
 Statistics\Calculator\AveragePostLength
@@ -67,14 +67,14 @@ Statistics\Calculator\NoopCalculator
 Statistics\Calculator\TotalPostsPerWeek
   Methods: 100.00% ( 2/ 2)   Lines: 100.00% ( 11/ 11)
 Statistics\Dto\ParamsTo
-  Methods:   0.00% ( 0/ 6)   Lines:   0.00% (  0/  9)
+  Methods: 100.00% ( 6/ 6)   Lines: 100.00% (  9/  9)
 Statistics\Dto\StatisticsTo
-  Methods:   0.00% ( 0/10)   Lines:   0.00% (  0/ 15)
+  Methods: 100.00% (10/10)   Lines: 100.00% ( 15/ 15)
 Statistics\Enum\StatsEnum
   Methods:  ( 0/ 0)   Lines:  (  0/  0)
 Statistics\Extractor\StatisticsToExtractor
   Methods: 100.00% ( 1/ 1)   Lines: 100.00% ( 16/ 16)
 Statistics\Service\Factory\StatisticsServiceFactory
-  Methods:   0.00% ( 0/ 1)   Lines:   0.00% (  0/  2)
+  Methods: 100.00% ( 1/ 1)   Lines: 100.00% (  2/  2)
 Statistics\Service\StatisticsService
-  Methods:   0.00% ( 0/ 2)   Lines:   0.00% (  0/  7)
+  Methods:  50.00% ( 1/ 2)   Lines:  85.71% (  6/  7)

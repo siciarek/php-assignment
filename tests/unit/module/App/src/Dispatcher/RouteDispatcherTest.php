@@ -8,13 +8,17 @@ use PHPUnit\Framework\TestCase;
 use App\Dispatcher\RouteDispatcher;
 use Dotenv\Dotenv;
 use Statistics\Enum\StatsEnum;
-use Statistics\Calculator\AveragePostNumberPerUser;
 
 /**
  * Class ATestTest
  * @package Tests\unit
  * @covers App\Config\Config
  * @covers App\Dispatcher\RouteDispatcher
+ * @covers App\Controller\Controller
+ * @covers App\Controller\IndexController
+ * @covers App\Controller\StatisticsController
+ * @covers App\Controller\ErrorController
+ * @covers App\Controller\Factory\StatisticsControllerFactory
  * @covers Statistics\Calculator\Factory\StatisticsCalculatorFactory
  * @covers Statistics\Calculator\CalculatorComposite
  * @covers Statistics\Calculator\AbstractCalculator
@@ -22,11 +26,11 @@ use Statistics\Calculator\AveragePostNumberPerUser;
  * @covers Statistics\Calculator\MaxPostLength
  * @covers Statistics\Calculator\AveragePostNumberPerUser
  * @covers Statistics\Calculator\TotalPostsPerWeek
- * @covers App\Controller\Controller
- * @covers App\Controller\IndexController
- * @covers App\Controller\StatisticsController
- * @covers App\Controller\ErrorController
- * @covers App\Controller\Factory\StatisticsControllerFactory
+ * @covers Statistics\Service\Factory\StatisticsServiceFactory
+ * @covers Statistics\Service\StatisticsService
+ * @covers Statistics\Dto\ParamsTo
+ * @covers Statistics\Dto\StatisticsTo
+ * @covers Statistics\Builder\ParamsBuilder
  * @covers SocialPost\Client\Factory\FictionalClientFactory
  * @covers SocialPost\Client\FictionalClient
  * @covers SocialPost\Client\SocialClientCacheDecorator
