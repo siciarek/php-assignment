@@ -18,6 +18,7 @@ services:
       - "./phpunit.xml:/app/phpunit.xml"
       - "./doc/:/app/doc/"
       - "./doc/docker/php.ini:/usr/local/etc/php/php.ini"
+      - "./module/:/app/module/"
 
 networks:
   default:

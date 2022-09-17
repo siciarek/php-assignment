@@ -1,12 +1,12 @@
 
 
 Code Coverage Report:     
-  2022-09-17 06:31:54     
+  2022-09-17 09:25:26     
                           
  Summary:                 
-  Classes:  3.12% (1/32)  
-  Methods:  6.32% (6/95)  
-  Lines:    6.18% (21/340)
+  Classes:  6.25% (2/32)  
+  Methods:  3.16% (3/95)  
+  Lines:   12.06% (41/340)
 
 App\Config\Config
   Methods:   0.00% ( 0/ 2)   Lines:   0.00% (  0/  9)
@@ -21,7 +21,7 @@ App\Controller\IndexController
 App\Controller\StatisticsController
   Methods:   0.00% ( 0/ 3)   Lines:   0.00% (  0/ 18)
 App\Dispatcher\RouteDispatcher
-  Methods:   0.00% ( 0/ 2)   Lines:   0.00% (  0/ 20)
+  Methods:   0.00% ( 0/ 2)   Lines:  85.00% ( 17/ 20)
 SocialPost\Cache\Factory\CacheFactory
   Methods:   0.00% ( 0/ 2)   Lines:   0.00% (  0/  2)
 SocialPost\Client\Factory\FictionalClientFactory
@@ -55,7 +55,7 @@ Statistics\Calculator\AbstractCalculator
 Statistics\Calculator\AveragePostLength
   Methods:   0.00% ( 0/ 2)   Lines:   0.00% (  0/  6)
 Statistics\Calculator\AveragePostNumberPerUser
-  Methods:   0.00% ( 0/ 2)   Lines:   0.00% (  0/  8)
+  Methods: 100.00% ( 2/ 2)   Lines: 100.00% (  8/  8)
 Statistics\Calculator\CalculatorComposite
   Methods:   0.00% ( 0/ 3)   Lines:   0.00% (  0/  8)
 Statistics\Calculator\Factory\StatisticsCalculatorFactory
@@ -69,7 +69,7 @@ Statistics\Calculator\TotalPostsPerWeek
 Statistics\Dto\ParamsTo
   Methods:   0.00% ( 0/ 6)   Lines:   0.00% (  0/  9)
 Statistics\Dto\StatisticsTo
-  Methods:  50.00% ( 5/10)   Lines:  33.33% (  5/ 15)
+  Methods:   0.00% ( 0/10)   Lines:   0.00% (  0/ 15)
 Statistics\Enum\StatsEnum
   Methods:  ( 0/ 0)   Lines:  (  0/  0)
 Statistics\Extractor\StatisticsToExtractor

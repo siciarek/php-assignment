@@ -10,7 +10,7 @@ use Statistics\Dto\StatisticsTo;
 
 /**
  * Class ATestTest
- *
+ * @covers Statistics\Extractor\StatisticsToExtractor
  * @package Tests\unit
  */
 class StatisticsToExtractorTest extends TestCase
