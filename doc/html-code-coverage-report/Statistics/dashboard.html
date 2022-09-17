@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for /app/module/Statistics</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../_css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="../_css/nv.d3.min.css" rel="stylesheet" type="text/css">
+  <link href="../_css/style.css" rel="stylesheet" type="text/css">
+  <link href="../_css/custom.css" rel="stylesheet" type="text/css">
+ </head>
+ <body>
+  <header>
+   <div class="container-fluid">
+    <div class="row">
+     <div class="col-md-12">
+      <nav aria-label="breadcrumb">
+       <ol class="breadcrumb">
+         <li class="breadcrumb-item"><a href="../index.html">/app/module</a></li>
+         <li class="breadcrumb-item"><a href="index.html">Statistics</a></li>
+         <li class="breadcrumb-item active">(Dashboard)</li>
+
+       </ol>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container-fluid">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="src/Builder/ParamsBuilder.php.html#14">Statistics\Builder\ParamsBuilder</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Calculator/AbstractCalculator.php.html#14">Statistics\Calculator\AbstractCalculator</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Calculator/AveragePostLength.php.html#13">Statistics\Calculator\AveragePostLength</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Calculator/AveragePostNumberPerUser.php.html#13">Statistics\Calculator\AveragePostNumberPerUser</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Calculator/CalculatorComposite.php.html#13">Statistics\Calculator\CalculatorComposite</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Calculator/Factory/StatisticsCalculatorFactory.php.html#21">Statistics\Calculator\Factory\StatisticsCalculatorFactory</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Calculator/MaxPostLength.php.html#13">Statistics\Calculator\MaxPostLength</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Calculator/NoopCalculator.php.html#10">Statistics\Calculator\NoopCalculator</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Calculator/TotalPostsPerWeek.php.html#13">Statistics\Calculator\TotalPostsPerWeek</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Dto/ParamsTo.php.html#12">Statistics\Dto\ParamsTo</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Service/Factory/StatisticsServiceFactory.php.html#13">Statistics\Service\Factory\StatisticsServiceFactory</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Service/StatisticsService.php.html#16">Statistics\Service\StatisticsService</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Dto/StatisticsTo.php.html#10">Statistics\Dto\StatisticsTo</a></td><td class="text-right">33%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="src/Calculator/AbstractCalculator.php.html#14">Statistics\Calculator\AbstractCalculator</a></td><td class="text-right">90</td></tr>
+       <tr><td><a href="src/Calculator/CalculatorComposite.php.html#13">Statistics\Calculator\CalculatorComposite</a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="src/Calculator/Factory/StatisticsCalculatorFactory.php.html#21">Statistics\Calculator\Factory\StatisticsCalculatorFactory</a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="src/Service/StatisticsService.php.html#16">Statistics\Service\StatisticsService</a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="src/Calculator/AveragePostLength.php.html#13">Statistics\Calculator\AveragePostLength</a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="src/Calculator/AveragePostNumberPerUser.php.html#13">Statistics\Calculator\AveragePostNumberPerUser</a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="src/Calculator/MaxPostLength.php.html#13">Statistics\Calculator\MaxPostLength</a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="src/Calculator/TotalPostsPerWeek.php.html#13">Statistics\Calculator\TotalPostsPerWeek</a></td><td class="text-right">12</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="src/Builder/ParamsBuilder.php.html#22"><abbr title="Statistics\Builder\ParamsBuilder::reportStatsParams">reportStatsParams</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Calculator/AbstractCalculator.php.html#29"><abbr title="Statistics\Calculator\AbstractCalculator::setParameters">setParameters</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Calculator/AbstractCalculator.php.html#39"><abbr title="Statistics\Calculator\AbstractCalculator::accumulateData">accumulateData</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Calculator/AbstractCalculator.php.html#51"><abbr title="Statistics\Calculator\AbstractCalculator::calculate">calculate</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Calculator/AbstractCalculator.php.html#63"><abbr title="Statistics\Calculator\AbstractCalculator::checkPost">checkPost</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Calculator/AveragePostLength.php.html#31"><abbr title="Statistics\Calculator\AveragePostLength::doAccumulate">doAccumulate</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Calculator/AveragePostLength.php.html#40"><abbr title="Statistics\Calculator\AveragePostLength::doCalculate">doCalculate</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Calculator/AveragePostNumberPerUser.php.html#26"><abbr title="Statistics\Calculator\AveragePostNumberPerUser::doAccumulate">doAccumulate</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Calculator/AveragePostNumberPerUser.php.html#35"><abbr title="Statistics\Calculator\AveragePostNumberPerUser::doCalculate">doCalculate</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Calculator/CalculatorComposite.php.html#26"><abbr title="Statistics\Calculator\CalculatorComposite::addChild">addChild</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Calculator/CalculatorComposite.php.html#36"><abbr title="Statistics\Calculator\CalculatorComposite::accumulateData">accumulateData</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Calculator/CalculatorComposite.php.html#46"><abbr title="Statistics\Calculator\CalculatorComposite::calculate">calculate</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Calculator/Factory/StatisticsCalculatorFactory.php.html#36"><abbr title="Statistics\Calculator\Factory\StatisticsCalculatorFactory::create">create</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Calculator/MaxPostLength.php.html#26"><abbr title="Statistics\Calculator\MaxPostLength::doAccumulate">doAccumulate</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Calculator/MaxPostLength.php.html#38"><abbr title="Statistics\Calculator\MaxPostLength::doCalculate">doCalculate</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Calculator/NoopCalculator.php.html#23"><abbr title="Statistics\Calculator\NoopCalculator::doCalculate">doCalculate</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Calculator/TotalPostsPerWeek.php.html#26"><abbr title="Statistics\Calculator\TotalPostsPerWeek::doAccumulate">doAccumulate</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Calculator/TotalPostsPerWeek.php.html#36"><abbr title="Statistics\Calculator\TotalPostsPerWeek::doCalculate">doCalculate</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Dto/ParamsTo.php.html#33"><abbr title="Statistics\Dto\ParamsTo::getStatName">getStatName</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Dto/ParamsTo.php.html#41"><abbr title="Statistics\Dto\ParamsTo::getStartDate">getStartDate</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Dto/ParamsTo.php.html#49"><abbr title="Statistics\Dto\ParamsTo::getEndDate">getEndDate</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Dto/ParamsTo.php.html#59"><abbr title="Statistics\Dto\ParamsTo::setStatName">setStatName</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Dto/ParamsTo.php.html#71"><abbr title="Statistics\Dto\ParamsTo::setStartDate">setStartDate</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Dto/ParamsTo.php.html#83"><abbr title="Statistics\Dto\ParamsTo::setEndDate">setEndDate</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Dto/StatisticsTo.php.html#67"><abbr title="Statistics\Dto\StatisticsTo::setName">setName</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Dto/StatisticsTo.php.html#79"><abbr title="Statistics\Dto\StatisticsTo::setValue">setValue</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Dto/StatisticsTo.php.html#91"><abbr title="Statistics\Dto\StatisticsTo::addChild">addChild</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Dto/StatisticsTo.php.html#111"><abbr title="Statistics\Dto\StatisticsTo::setSplitPeriod">setSplitPeriod</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Dto/StatisticsTo.php.html#131"><abbr title="Statistics\Dto\StatisticsTo::setUnits">setUnits</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Service/Factory/StatisticsServiceFactory.php.html#19"><abbr title="Statistics\Service\Factory\StatisticsServiceFactory::create">create</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Service/StatisticsService.php.html#29"><abbr title="Statistics\Service\StatisticsService::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Service/StatisticsService.php.html#40"><abbr title="Statistics\Service\StatisticsService::calculateStats">calculateStats</abbr></a></td><td class="text-right">0%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="src/Calculator/AbstractCalculator.php.html#63"><abbr title="Statistics\Calculator\AbstractCalculator::checkPost">checkPost</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="src/Calculator/Factory/StatisticsCalculatorFactory.php.html#36"><abbr title="Statistics\Calculator\Factory\StatisticsCalculatorFactory::create">create</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="src/Service/StatisticsService.php.html#40"><abbr title="Statistics\Service\StatisticsService::calculateStats">calculateStats</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="src/Calculator/AbstractCalculator.php.html#39"><abbr title="Statistics\Calculator\AbstractCalculator::accumulateData">accumulateData</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="src/Calculator/AveragePostLength.php.html#40"><abbr title="Statistics\Calculator\AveragePostLength::doCalculate">doCalculate</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="src/Calculator/AveragePostNumberPerUser.php.html#35"><abbr title="Statistics\Calculator\AveragePostNumberPerUser::doCalculate">doCalculate</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="src/Calculator/CalculatorComposite.php.html#36"><abbr title="Statistics\Calculator\CalculatorComposite::accumulateData">accumulateData</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="src/Calculator/CalculatorComposite.php.html#46"><abbr title="Statistics\Calculator\CalculatorComposite::calculate">calculate</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="src/Calculator/MaxPostLength.php.html#26"><abbr title="Statistics\Calculator\MaxPostLength::doAccumulate">doAccumulate</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="src/Calculator/TotalPostsPerWeek.php.html#36"><abbr title="Statistics\Calculator\TotalPostsPerWeek::doCalculate">doCalculate</abbr></a></td><td class="text-right">6</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 9.2.17</a> using <a href="https://secure.php.net/" target="_top">PHP 8.0.23</a> and <a href="https://phpunit.de/">PHPUnit 9.5.10</a> at Sat Sep 17 6:31:50 UTC 2022.</small>
+    </p>
+   </footer>
+  </div>
+  <script src="../_js/jquery.min.js" type="text/javascript"></script>
+  <script src="../_js/d3.min.js" type="text/javascript"></script>
+  <script src="../_js/nv.d3.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([12,0,0,0,1,0,0,0,0,0,0,2], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([32,0,0,0,0,0,0,0,0,0,0,9], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[0,1,"<a href=\"src\/Builder\/ParamsBuilder.php.html#14\">Statistics\\Builder\\ParamsBuilder<\/a>"],[0,9,"<a href=\"src\/Calculator\/AbstractCalculator.php.html#14\">Statistics\\Calculator\\AbstractCalculator<\/a>"],[0,3,"<a href=\"src\/Calculator\/AveragePostLength.php.html#13\">Statistics\\Calculator\\AveragePostLength<\/a>"],[0,3,"<a href=\"src\/Calculator\/AveragePostNumberPerUser.php.html#13\">Statistics\\Calculator\\AveragePostNumberPerUser<\/a>"],[0,5,"<a href=\"src\/Calculator\/CalculatorComposite.php.html#13\">Statistics\\Calculator\\CalculatorComposite<\/a>"],[0,4,"<a href=\"src\/Calculator\/Factory\/StatisticsCalculatorFactory.php.html#21\">Statistics\\Calculator\\Factory\\StatisticsCalculatorFactory<\/a>"],[0,3,"<a href=\"src\/Calculator\/MaxPostLength.php.html#13\">Statistics\\Calculator\\MaxPostLength<\/a>"],[0,2,"<a href=\"src\/Calculator\/NoopCalculator.php.html#10\">Statistics\\Calculator\\NoopCalculator<\/a>"],[0,3,"<a href=\"src\/Calculator\/TotalPostsPerWeek.php.html#13\">Statistics\\Calculator\\TotalPostsPerWeek<\/a>"],[0,6,"<a href=\"src\/Dto\/ParamsTo.php.html#12\">Statistics\\Dto\\ParamsTo<\/a>"],[33.33333333333333,10,"<a href=\"src\/Dto\/StatisticsTo.php.html#10\">Statistics\\Dto\\StatisticsTo<\/a>"],[100,0,"<a href=\"src\/Enum\/StatsEnum.php.html#10\">Statistics\\Enum\\StatsEnum<\/a>"],[100,4,"<a href=\"src\/Extractor\/StatisticsToExtractor.php.html#12\">Statistics\\Extractor\\StatisticsToExtractor<\/a>"],[0,1,"<a href=\"src\/Service\/Factory\/StatisticsServiceFactory.php.html#13\">Statistics\\Service\\Factory\\StatisticsServiceFactory<\/a>"],[0,4,"<a href=\"src\/Service\/StatisticsService.php.html#16\">Statistics\\Service\\StatisticsService<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[0,1,"<a href=\"src\/Builder\/ParamsBuilder.php.html#22\">Statistics\\Builder\\ParamsBuilder::reportStatsParams<\/a>"],[0,1,"<a href=\"src\/Calculator\/AbstractCalculator.php.html#29\">Statistics\\Calculator\\AbstractCalculator::setParameters<\/a>"],[0,2,"<a href=\"src\/Calculator\/AbstractCalculator.php.html#39\">Statistics\\Calculator\\AbstractCalculator::accumulateData<\/a>"],[0,1,"<a href=\"src\/Calculator\/AbstractCalculator.php.html#51\">Statistics\\Calculator\\AbstractCalculator::calculate<\/a>"],[0,5,"<a href=\"src\/Calculator\/AbstractCalculator.php.html#63\">Statistics\\Calculator\\AbstractCalculator::checkPost<\/a>"],[100,0,"<a href=\"src\/Calculator\/AbstractCalculator.php.html#83\">Statistics\\Calculator\\AbstractCalculator::doAccumulate<\/a>"],[100,0,"<a href=\"src\/Calculator\/AbstractCalculator.php.html#88\">Statistics\\Calculator\\AbstractCalculator::doCalculate<\/a>"],[0,1,"<a href=\"src\/Calculator\/AveragePostLength.php.html#31\">Statistics\\Calculator\\AveragePostLength::doAccumulate<\/a>"],[0,2,"<a href=\"src\/Calculator\/AveragePostLength.php.html#40\">Statistics\\Calculator\\AveragePostLength::doCalculate<\/a>"],[0,1,"<a href=\"src\/Calculator\/AveragePostNumberPerUser.php.html#26\">Statistics\\Calculator\\AveragePostNumberPerUser::doAccumulate<\/a>"],[0,2,"<a href=\"src\/Calculator\/AveragePostNumberPerUser.php.html#35\">Statistics\\Calculator\\AveragePostNumberPerUser::doCalculate<\/a>"],[0,1,"<a href=\"src\/Calculator\/CalculatorComposite.php.html#26\">Statistics\\Calculator\\CalculatorComposite::addChild<\/a>"],[0,2,"<a href=\"src\/Calculator\/CalculatorComposite.php.html#36\">Statistics\\Calculator\\CalculatorComposite::accumulateData<\/a>"],[0,2,"<a href=\"src\/Calculator\/CalculatorComposite.php.html#46\">Statistics\\Calculator\\CalculatorComposite::calculate<\/a>"],[0,4,"<a href=\"src\/Calculator\/Factory\/StatisticsCalculatorFactory.php.html#36\">Statistics\\Calculator\\Factory\\StatisticsCalculatorFactory::create<\/a>"],[0,2,"<a href=\"src\/Calculator\/MaxPostLength.php.html#26\">Statistics\\Calculator\\MaxPostLength::doAccumulate<\/a>"],[0,1,"<a href=\"src\/Calculator\/MaxPostLength.php.html#38\">Statistics\\Calculator\\MaxPostLength::doCalculate<\/a>"],[100,1,"<a href=\"src\/Calculator\/NoopCalculator.php.html#15\">Statistics\\Calculator\\NoopCalculator::doAccumulate<\/a>"],[0,1,"<a href=\"src\/Calculator\/NoopCalculator.php.html#23\">Statistics\\Calculator\\NoopCalculator::doCalculate<\/a>"],[0,1,"<a href=\"src\/Calculator\/TotalPostsPerWeek.php.html#26\">Statistics\\Calculator\\TotalPostsPerWeek::doAccumulate<\/a>"],[0,2,"<a href=\"src\/Calculator\/TotalPostsPerWeek.php.html#36\">Statistics\\Calculator\\TotalPostsPerWeek::doCalculate<\/a>"],[0,1,"<a href=\"src\/Dto\/ParamsTo.php.html#33\">Statistics\\Dto\\ParamsTo::getStatName<\/a>"],[0,1,"<a href=\"src\/Dto\/ParamsTo.php.html#41\">Statistics\\Dto\\ParamsTo::getStartDate<\/a>"],[0,1,"<a href=\"src\/Dto\/ParamsTo.php.html#49\">Statistics\\Dto\\ParamsTo::getEndDate<\/a>"],[0,1,"<a href=\"src\/Dto\/ParamsTo.php.html#59\">Statistics\\Dto\\ParamsTo::setStatName<\/a>"],[0,1,"<a href=\"src\/Dto\/ParamsTo.php.html#71\">Statistics\\Dto\\ParamsTo::setStartDate<\/a>"],[0,1,"<a href=\"src\/Dto\/ParamsTo.php.html#83\">Statistics\\Dto\\ParamsTo::setEndDate<\/a>"],[100,1,"<a href=\"src\/Dto\/StatisticsTo.php.html#41\">Statistics\\Dto\\StatisticsTo::getName<\/a>"],[100,1,"<a href=\"src\/Dto\/StatisticsTo.php.html#49\">Statistics\\Dto\\StatisticsTo::getValue<\/a>"],[100,1,"<a href=\"src\/Dto\/StatisticsTo.php.html#57\">Statistics\\Dto\\StatisticsTo::getChildren<\/a>"],[0,1,"<a href=\"src\/Dto\/StatisticsTo.php.html#67\">Statistics\\Dto\\StatisticsTo::setName<\/a>"],[0,1,"<a href=\"src\/Dto\/StatisticsTo.php.html#79\">Statistics\\Dto\\StatisticsTo::setValue<\/a>"],[0,1,"<a href=\"src\/Dto\/StatisticsTo.php.html#91\">Statistics\\Dto\\StatisticsTo::addChild<\/a>"],[100,1,"<a href=\"src\/Dto\/StatisticsTo.php.html#101\">Statistics\\Dto\\StatisticsTo::getSplitPeriod<\/a>"],[0,1,"<a href=\"src\/Dto\/StatisticsTo.php.html#111\">Statistics\\Dto\\StatisticsTo::setSplitPeriod<\/a>"],[100,1,"<a href=\"src\/Dto\/StatisticsTo.php.html#121\">Statistics\\Dto\\StatisticsTo::getUnits<\/a>"],[0,1,"<a href=\"src\/Dto\/StatisticsTo.php.html#131\">Statistics\\Dto\\StatisticsTo::setUnits<\/a>"],[100,4,"<a href=\"src\/Extractor\/StatisticsToExtractor.php.html#21\">Statistics\\Extractor\\StatisticsToExtractor::extract<\/a>"],[0,1,"<a href=\"src\/Service\/Factory\/StatisticsServiceFactory.php.html#19\">Statistics\\Service\\Factory\\StatisticsServiceFactory::create<\/a>"],[0,1,"<a href=\"src\/Service\/StatisticsService.php.html#29\">Statistics\\Service\\StatisticsService::__construct<\/a>"],[0,3,"<a href=\"src\/Service\/StatisticsService.php.html#40\">Statistics\\Service\\StatisticsService::calculateStats<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>

@@ -1,13 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" backupGlobals="false" backupStaticAttributes="false" bootstrap="vendor/autoload.php" colors="true" convertErrorsToExceptions="true" convertNoticesToExceptions="true" convertWarningsToExceptions="true" processIsolation="false" stopOnFailure="false" xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd">
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" backupGlobals="false" backupStaticAttributes="false"
+         bootstrap="vendor/autoload.php" colors="true" convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true" convertWarningsToExceptions="true" processIsolation="false"
+         stopOnFailure="false" xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd">
     <coverage processUncoveredFiles="true">
         <include>
-            <directory suffix=".php">./app</directory>
+            <directory suffix=".php">module</directory>
         </include>
+        <report>
+            <html outputDirectory="doc/html-code-coverage-report/"/>
+            <text outputFile="doc/text-code-coverage-report.txt" showUncoveredFiles="true" showOnlySummary="false"/>
+        </report>
     </coverage>
+
     <testsuites>
         <testsuite name="unit">
-            <directory suffix="Test.php">./tests/unit/module/Statistics/src/Extractor/</directory>
+            <directory>tests</directory>
         </testsuite>
     </testsuites>
+
+
+    <!--    <coverage cacheDirectory=".phpunit.cache/code-coverage"-->
+    <!--              includeUncoveredFiles="true"-->
+    <!--              processUncoveredFiles="true"-->
+    <!--              pathCoverage="true"-->
+    <!--              ignoreDeprecatedCodeUnits="true"-->
+    <!--              disableCodeCoverageIgnore="true"-->
+    <!--    >-->
+    <!--        <include>-->
+    <!--            <directory suffix=".php">src</directory>-->
+    <!--        </include>-->
+    <!--        <report>-->
+    <!--            &lt;!&ndash;            <clover outputFile="clover.xml"/>&ndash;&gt;-->
+    <!--            &lt;!&ndash;            <cobertura outputFile="cobertura.xml"/>&ndash;&gt;-->
+    <!--            &lt;!&ndash;            <crap4j outputFile="crap4j.xml" threshold="50"/>&ndash;&gt;-->
+    <!--            <html outputDirectory="doc/html-code-coverage" lowUpperBound="75" highLowerBound="100"/>-->
+    <!--            <php outputFile="coverage.php"/>-->
+    <!--            <text outputFile="txt-code-coverage.txt" showUncoveredFiles="false" showOnlySummary="true"/>-->
+    <!--            &lt;!&ndash;            <xml outputDirectory="doc/xml-code-coverage"/>&ndash;&gt;-->
+    <!--        </report>-->
+    <!--    </coverage>-->
 </phpunit>

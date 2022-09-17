@@ -1,0 +1,80 @@
+
+
+Code Coverage Report:     
+  2022-09-17 06:31:54     
+                          
+ Summary:                 
+  Classes:  3.12% (1/32)  
+  Methods:  6.32% (6/95)  
+  Lines:    6.18% (21/340)
+
+App\Config\Config
+  Methods:   0.00% ( 0/ 2)   Lines:   0.00% (  0/  9)
+App\Controller\Controller
+  Methods:   0.00% ( 0/ 1)   Lines:   0.00% (  0/  9)
+App\Controller\ErrorController
+  Methods:   0.00% ( 0/ 1)   Lines:   0.00% (  0/  1)
+App\Controller\Factory\StatisticsControllerFactory
+  Methods:   0.00% ( 0/ 1)   Lines:   0.00% (  0/  3)
+App\Controller\IndexController
+  Methods:   0.00% ( 0/ 1)   Lines:   0.00% (  0/  6)
+App\Controller\StatisticsController
+  Methods:   0.00% ( 0/ 3)   Lines:   0.00% (  0/ 18)
+App\Dispatcher\RouteDispatcher
+  Methods:   0.00% ( 0/ 2)   Lines:   0.00% (  0/ 20)
+SocialPost\Cache\Factory\CacheFactory
+  Methods:   0.00% ( 0/ 2)   Lines:   0.00% (  0/  2)
+SocialPost\Client\Factory\FictionalClientFactory
+  Methods:   0.00% ( 0/ 2)   Lines:   0.00% (  0/ 11)
+SocialPost\Client\FictionalClient
+  Methods:   0.00% ( 0/ 6)   Lines:   0.00% (  0/ 24)
+SocialPost\Client\SocialClientCacheDecorator
+  Methods:   0.00% ( 0/ 6)   Lines:   0.00% (  0/ 19)
+SocialPost\Driver\Factory\FictionalDriverFactory
+  Methods:   0.00% ( 0/ 1)   Lines:   0.00% (  0/  7)
+SocialPost\Driver\FictionalDriver
+  Methods:   0.00% ( 0/ 8)   Lines:   0.00% (  0/ 35)
+SocialPost\Dto\FetchParamsTo
+  Methods:   0.00% ( 0/ 3)   Lines:   0.00% (  0/  4)
+SocialPost\Dto\SocialPostTo
+  Methods:   0.00% ( 0/12)   Lines:   0.00% (  0/ 18)
+SocialPost\Exception\BadResponseException
+  Methods:  ( 0/ 0)   Lines:  (  0/  0)
+SocialPost\Exception\InvalidTokenException
+  Methods:  ( 0/ 0)   Lines:  (  0/  0)
+SocialPost\Hydrator\FictionalPostHydrator
+  Methods:   0.00% ( 0/ 2)   Lines:   0.00% (  0/ 10)
+SocialPost\Service\Factory\SocialPostServiceFactory
+  Methods:   0.00% ( 0/ 1)   Lines:   0.00% (  0/  3)
+SocialPost\Service\SocialPostService
+  Methods:   0.00% ( 0/ 3)   Lines:   0.00% (  0/  9)
+Statistics\Builder\ParamsBuilder
+  Methods:   0.00% ( 0/ 1)   Lines:   0.00% (  0/ 18)
+Statistics\Calculator\AbstractCalculator
+  Methods:   0.00% ( 0/ 4)   Lines:   0.00% (  0/ 15)
+Statistics\Calculator\AveragePostLength
+  Methods:   0.00% ( 0/ 2)   Lines:   0.00% (  0/  6)
+Statistics\Calculator\AveragePostNumberPerUser
+  Methods:   0.00% ( 0/ 2)   Lines:   0.00% (  0/  8)
+Statistics\Calculator\CalculatorComposite
+  Methods:   0.00% ( 0/ 3)   Lines:   0.00% (  0/  8)
+Statistics\Calculator\Factory\StatisticsCalculatorFactory
+  Methods:   0.00% ( 0/ 1)   Lines:   0.00% (  0/ 11)
+Statistics\Calculator\MaxPostLength
+  Methods:   0.00% ( 0/ 2)   Lines:   0.00% (  0/  4)
+Statistics\Calculator\NoopCalculator
+  Methods:   0.00% ( 0/ 1)   Lines:   0.00% (  0/  1)
+Statistics\Calculator\TotalPostsPerWeek
+  Methods:   0.00% ( 0/ 2)   Lines:   0.00% (  0/ 11)
+Statistics\Dto\ParamsTo
+  Methods:   0.00% ( 0/ 6)   Lines:   0.00% (  0/  9)
+Statistics\Dto\StatisticsTo
+  Methods:  50.00% ( 5/10)   Lines:  33.33% (  5/ 15)
+Statistics\Enum\StatsEnum
+  Methods:  ( 0/ 0)   Lines:  (  0/  0)
+Statistics\Extractor\StatisticsToExtractor
+  Methods: 100.00% ( 1/ 1)   Lines: 100.00% ( 16/ 16)
+Statistics\Service\Factory\StatisticsServiceFactory
+  Methods:   0.00% ( 0/ 1)   Lines:   0.00% (  0/  2)
+Statistics\Service\StatisticsService
+  Methods:   0.00% ( 0/ 2)   Lines:   0.00% (  0/  7)

@@ -13,6 +13,11 @@ services:
       - "7777:80"
     volumes:
       - "./tests/:/app/tests/"
+      - "./composer.json:/app/composer.json"
+      - "./composer.lock:/app/composer.lock"
+      - "./phpunit.xml:/app/phpunit.xml"
+      - "./doc/:/app/doc/"
+      - "./doc/docker/php.ini:/usr/local/etc/php/php.ini"
 
 networks:
   default:
