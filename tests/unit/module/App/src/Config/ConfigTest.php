@@ -17,7 +17,7 @@ class ConfigTest extends TestCase
     /**
      * @test
      */
-    public function getTest(): void
+    public function get(): void
     {
         $group = "routes";
         $keys = ["/"];

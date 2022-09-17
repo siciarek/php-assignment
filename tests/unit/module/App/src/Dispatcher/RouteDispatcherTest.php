@@ -25,6 +25,7 @@ use Statistics\Calculator\AveragePostNumberPerUser;
  * @covers App\Controller\Controller
  * @covers App\Controller\IndexController
  * @covers App\Controller\StatisticsController
+ * @covers App\Controller\ErrorController
  * @covers App\Controller\Factory\StatisticsControllerFactory
  * @covers SocialPost\Client\Factory\FictionalClientFactory
  * @covers SocialPost\Client\FictionalClient
@@ -40,10 +41,17 @@ use Statistics\Calculator\AveragePostNumberPerUser;
  */
 class RouteDispatcherTest extends TestCase
 {
+    public static function invalidRequestDataProvider()
+    {
+        return [
+            ["/invalid-request-path", '<p class="lead">Page not found</p>'],
+        ];
+    }
+
     public static function basicRequestDataProvider()
     {
         return [
-            ["/", '<title>Hello, world!</title>'],
+            ["/", '<p class="lead">posts statistics</p>'],
         ];
     }
 
@@ -93,6 +101,21 @@ class RouteDispatcherTest extends TestCase
 
     /**
      * @test
+     * @dataProvider invalidRequestDataProvider
+     */
+    public function locateControllerInvalidRequest($requestUri, $match): void
+    {
+        ob_start();
+        @RouteDispatcher::dispatch($requestUri);
+        $actual = ob_get_contents();
+        ob_end_clean();
+
+        $this->assertNotNull($actual);
+        $this->assertStringContainsString($match, $actual);
+    }
+
+    /**
+     * @test
      * @dataProvider avgStatsRequestsDataProvider
      */
     public function locateControllerAvgStatsRequests($requestUri, $expected): void
@@ -122,10 +145,10 @@ class RouteDispatcherTest extends TestCase
             $data = array_values($result)[0];
 
             if ($statsName === StatsEnum::TOTAL_POSTS_PER_WEEK) {
-                $this->assertCount($expectedValue, $data["children"]);
+                $this->assertGreaterThanOrEqual(0, count($data["children"]), $statsName);
             }
             else {
-                $this->assertEqualsWithDelta($expectedValue, $data["value"], 0.2, $statsName);
+                $this->assertGreaterThanOrEqual(0, $data["value"], $statsName);
             }
         }
     }

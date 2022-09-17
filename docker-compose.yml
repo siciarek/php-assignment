@@ -19,7 +19,6 @@ services:
       - "./.env:/app/.env"
       - "./.env.test:/app/.env.test"
       - "./doc/:/app/doc/"
-      - "./doc/docker/php.ini:/usr/local/etc/php/php.ini"
       - "./module/:/app/module/"
 
 networks:
