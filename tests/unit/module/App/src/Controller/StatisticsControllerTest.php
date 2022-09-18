@@ -83,7 +83,7 @@ class StatisticsControllerTest extends TestCase
         ob_end_flush();
 
         $data = json_decode($actual, true);
-        $this->assertArrayHasKey("message", $data);
+        $this->assertArrayHasKey("message", $data, var_export($data, true));
         $this->assertEquals("An error occurred", $data["message"]);
     }
 }

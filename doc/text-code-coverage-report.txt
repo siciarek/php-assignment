@@ -1,12 +1,12 @@
 
 
 Code Coverage Report:      
-  2022-09-17 19:47:35      
+  2022-09-18 09:00:59      
                            
  Summary:                  
-  Classes: 71.88% (23/32)  
-  Methods: 80.00% (76/95)  
-  Lines:   85.88% (292/340)
+  Classes: 75.00% (24/32)  
+  Methods: 83.16% (79/95)  
+  Lines:   86.76% (295/340)
 
 App\Config\Config
   Methods: 100.00% ( 2/ 2)   Lines: 100.00% (  9/  9)
@@ -23,7 +23,7 @@ App\Controller\StatisticsController
 App\Dispatcher\RouteDispatcher
   Methods:  50.00% ( 1/ 2)   Lines:  90.00% ( 18/ 20)
 SocialPost\Cache\Factory\CacheFactory
-  Methods:  50.00% ( 1/ 2)   Lines:  50.00% (  1/  2)
+  Methods: 100.00% ( 2/ 2)   Lines: 100.00% (  2/  2)
 SocialPost\Client\Factory\FictionalClientFactory
   Methods: 100.00% ( 2/ 2)   Lines: 100.00% ( 11/ 11)
 SocialPost\Client\FictionalClient
@@ -33,7 +33,7 @@ SocialPost\Client\SocialClientCacheDecorator
 SocialPost\Driver\Factory\FictionalDriverFactory
   Methods: 100.00% ( 1/ 1)   Lines: 100.00% (  7/  7)
 SocialPost\Driver\FictionalDriver
-  Methods:  37.50% ( 3/ 8)   Lines:  68.57% ( 24/ 35)
+  Methods:  62.50% ( 5/ 8)   Lines:  74.29% ( 26/ 35)
 SocialPost\Dto\FetchParamsTo
   Methods: 100.00% ( 3/ 3)   Lines: 100.00% (  4/  4)
 SocialPost\Dto\SocialPostTo
