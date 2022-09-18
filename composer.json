@@ -20,7 +20,8 @@
         "phpunit/phpunit": "9.5.10",
         "phpunit/phpunit-selenium": "*",
         "php-webdriver/webdriver": "*",
-        "phpunit/php-code-coverage": "*"
+        "phpunit/php-code-coverage": "*",
+        "mockery/mockery": "*"
     },
     "autoload": {
         "psr-4": {
