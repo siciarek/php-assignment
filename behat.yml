@@ -1,0 +1,22 @@
+default:
+  extensions:
+    Behat\MinkExtension:
+      # Set the base_url to match your environment setup
+      base_url: http://0:7777
+      javascript_session: selenium2
+      default_session: selenium2
+      browser_name: 'chrome'
+
+      selenium2:
+        wd_host: http://selenium:4444 when selenium is on remote host
+        capabilities:
+          "browserName": "chrome"
+          "browser": "chrome"
+
+  suites:
+    default:
+      contexts:
+        # Default Behat Context
+        - FeatureContext
+        # Additional Behat Mink Context
+        - Behat\MinkExtension\Context\MinkContext

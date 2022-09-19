@@ -18,10 +18,11 @@
     },
     "require-dev": {
         "phpunit/phpunit": "9.5.10",
-        "phpunit/phpunit-selenium": "*",
-        "php-webdriver/webdriver": "*",
         "phpunit/php-code-coverage": "*",
-        "mockery/mockery": "*"
+        "mockery/mockery": "*",
+        "behat/behat": "*",
+        "behat/mink-extension": "*",
+        "behat/mink-selenium2-driver": "*"
     },
     "autoload": {
         "psr-4": {

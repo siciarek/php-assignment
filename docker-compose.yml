@@ -1,7 +1,14 @@
 version: '3.9'
 
 services:
+  selenium:
+    image: selenium/standalone-chrome
+    ports:
+      - "4444:4444"
+
   sm_assignment:
+    depends_on:
+      - selenium
     image: php_assignment:latest
     container_name: php_assignment
     restart: "no"
@@ -20,6 +27,9 @@ services:
       - "./.env.test:/app/.env.test"
       - "./doc/:/app/doc/"
       - "./module/:/app/module/"
+      - "./features/:/app/features/"
+      - "./behat.yml:/app/behat.yml"
+      - "./vendor/:/app/vendor/"
 
 networks:
   default:
