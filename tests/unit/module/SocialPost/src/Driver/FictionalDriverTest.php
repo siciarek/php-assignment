@@ -9,6 +9,7 @@ use SocialPost\Client\FictionalClient;
 use SocialPost\Driver\FictionalDriver;
 use SocialPost\Exception\BadResponseException;
 use Tests\Mocks\MockCache;
+use SocialPost\Exception\InvalidTokenException;
 
 /**
  * Class ATestTest
@@ -18,6 +19,10 @@ use Tests\Mocks\MockCache;
 class FictionalDriverTest extends TestCase
 {
     public function getCallback (string $url, array $parameters) {
+        if($parameters["page"] == -1) {
+            throw new InvalidTokenException();
+        }
+
         # Check no posts behaviour.
         $page = $parameters["page"] == 0 ? "empty.json" : sprintf("%02d.json", $parameters["page"]);
 
@@ -41,8 +46,6 @@ class FictionalDriverTest extends TestCase
         );
 
         $client = new FictionalClient($guzzleClient, $_ENV['FICTIONAL_SOCIAL_API_CLIENT_ID']);
-
-
 
         $client = $this->getMockBuilder(FictionalClient::class)
             ->setConstructorArgs([$guzzleClient, $_ENV['FICTIONAL_SOCIAL_API_CLIENT_ID']])
@@ -89,6 +92,37 @@ class FictionalDriverTest extends TestCase
 
         $this->expectException(BadResponseException::class);
         $this->expectExceptionMessage("No posts returned");
+        # I need to start iterating for exception to occur.
+        foreach($posts as $post) {
+
+        }
+    }
+
+    /**
+     * @test
+     */
+    public function fetchPostByPageInvalidTokenException(): void
+    {
+        $this->fictionalDriver->setCache(new MockCache());
+        $posts = $this->fictionalDriver->fetchPostsByPage(-1);
+
+        $this->expectException(InvalidTokenException::class);
+        $this->expectExceptionMessage("");
+        # I need to start iterating for exception to occur.
+        foreach($posts as $post) {
+
+        }
+    }
+
+    /**
+     * @test
+     */
+    public function fetchPostByPageInvalidTokenExceptionNoCache(): void
+    {
+        $posts = $this->fictionalDriver->fetchPostsByPage(-1);
+
+        $this->expectException(InvalidTokenException::class);
+        $this->expectExceptionMessage("");
         # I need to start iterating for exception to occur.
         foreach($posts as $post) {
 
