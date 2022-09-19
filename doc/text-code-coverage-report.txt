@@ -1,12 +1,12 @@
 
 
 Code Coverage Report:      
-  2022-09-18 18:47:08      
+  2022-09-19 06:02:43      
                            
  Summary:                  
-  Classes: 78.12% (25/32)  
-  Methods: 86.32% (82/95)  
-  Lines:   90.59% (308/340)
+  Classes: 90.62% (29/32)  
+  Methods: 90.53% (86/95)  
+  Lines:   91.76% (312/340)
 
 App\Config\Config
   Methods: 100.00% ( 2/ 2)   Lines: 100.00% (  9/  9)
@@ -53,17 +53,17 @@ Statistics\Builder\ParamsBuilder
 Statistics\Calculator\AbstractCalculator
   Methods: 100.00% ( 4/ 4)   Lines: 100.00% ( 15/ 15)
 Statistics\Calculator\AveragePostLength
-  Methods:  50.00% ( 1/ 2)   Lines:  83.33% (  5/  6)
+  Methods: 100.00% ( 2/ 2)   Lines: 100.00% (  6/  6)
 Statistics\Calculator\AveragePostNumberPerUser
   Methods: 100.00% ( 2/ 2)   Lines: 100.00% (  8/  8)
 Statistics\Calculator\CalculatorComposite
   Methods: 100.00% ( 3/ 3)   Lines: 100.00% (  8/  8)
 Statistics\Calculator\Factory\StatisticsCalculatorFactory
-  Methods:   0.00% ( 0/ 1)   Lines:  90.91% ( 10/ 11)
+  Methods: 100.00% ( 1/ 1)   Lines: 100.00% ( 11/ 11)
 Statistics\Calculator\MaxPostLength
   Methods: 100.00% ( 2/ 2)   Lines: 100.00% (  4/  4)
 Statistics\Calculator\NoopCalculator
-  Methods:   0.00% ( 0/ 1)   Lines:   0.00% (  0/  1)
+  Methods: 100.00% ( 1/ 1)   Lines: 100.00% (  1/  1)
 Statistics\Calculator\TotalPostsPerWeek
   Methods: 100.00% ( 2/ 2)   Lines: 100.00% ( 11/ 11)
 Statistics\Dto\ParamsTo
@@ -77,4 +77,4 @@ Statistics\Extractor\StatisticsToExtractor
 Statistics\Service\Factory\StatisticsServiceFactory
   Methods: 100.00% ( 1/ 1)   Lines: 100.00% (  2/  2)
 Statistics\Service\StatisticsService
-  Methods:  50.00% ( 1/ 2)   Lines:  85.71% (  6/  7)
+  Methods: 100.00% ( 2/ 2)   Lines: 100.00% (  7/  7)
