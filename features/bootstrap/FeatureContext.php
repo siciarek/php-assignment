@@ -19,4 +19,13 @@ class FeatureContext implements Context
     public function __construct()
     {
     }
+    
+     /**
+     * @When I wait :arg1 seconds
+     */
+    public function iWaitSeconds($arg1)
+    {
+        sleep($arg1);
+    }
+
 }

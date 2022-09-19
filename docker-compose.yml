@@ -1,14 +1,7 @@
 version: '3.9'
 
 services:
-  selenium:
-    image: selenium/standalone-chrome
-    ports:
-      - "4444:4444"
-
   sm_assignment:
-    depends_on:
-      - selenium
     image: php_assignment:latest
     container_name: php_assignment
     restart: "no"
