@@ -15,6 +15,10 @@
         <include>
             <directory suffix=".php">module</directory>
         </include>
+        <exclude>
+            <!-- Strange behaviour. Line 11 in the following file is marked as uncovered. -->
+            <file>module/App/config/controllers.php</file>
+        </exclude>
         <report>
             <html outputDirectory="doc/html-code-coverage-report/" lowUpperBound="75" highLowerBound="95"/>
             <text outputFile="doc/text-code-coverage-report.txt" showUncoveredFiles="true" showOnlySummary="false"/>

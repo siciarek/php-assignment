@@ -1,12 +1,12 @@
 
 
 Code Coverage Report:      
-  2022-09-19 06:02:43      
+  2022-09-19 07:06:35      
                            
  Summary:                  
-  Classes: 90.62% (29/32)  
-  Methods: 90.53% (86/95)  
-  Lines:   91.76% (312/340)
+  Classes: 93.75% (30/32)  
+  Methods: 91.58% (87/95)  
+  Lines:   92.63% (314/339)
 
 App\Config\Config
   Methods: 100.00% ( 2/ 2)   Lines: 100.00% (  9/  9)
@@ -21,7 +21,7 @@ App\Controller\IndexController
 App\Controller\StatisticsController
   Methods: 100.00% ( 3/ 3)   Lines: 100.00% ( 18/ 18)
 App\Dispatcher\RouteDispatcher
-  Methods:  50.00% ( 1/ 2)   Lines:  90.00% ( 18/ 20)
+  Methods: 100.00% ( 2/ 2)   Lines: 100.00% ( 20/ 20)
 SocialPost\Cache\Factory\CacheFactory
   Methods: 100.00% ( 2/ 2)   Lines: 100.00% (  2/  2)
 SocialPost\Client\Factory\FictionalClientFactory

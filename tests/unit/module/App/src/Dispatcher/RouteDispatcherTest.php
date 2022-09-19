@@ -4,14 +4,21 @@ declare(strict_types=1);
 
 namespace Tests\unit;
 
+use App\Controller\ErrorController;
+use App\Controller\Factory\StatisticsControllerFactory;
+use App\Controller\IndexController;
+use App\Controller\StatisticsController;
 use PHPUnit\Framework\TestCase;
 use App\Dispatcher\RouteDispatcher;
 use Dotenv\Dotenv;
 use Statistics\Enum\StatsEnum;
+use Mockery as m;
 
 /**
  * Class ATestTest
  * @package Tests\unit
+ * @runTestsInSeparateProcesses
+ * @preserveGlobalState disabled
  * @covers App\Config\Config
  * @covers App\Dispatcher\RouteDispatcher
  * @covers App\Controller\Controller
@@ -45,6 +52,26 @@ use Statistics\Enum\StatsEnum;
  */
 class RouteDispatcherTest extends TestCase
 {
+    public static function exceptionsDataProvider()
+    {
+        return [
+            [
+                [
+                    StatisticsController::class => StatisticsControllerFactory::class,
+                    "App\Controller\YetAnotherController" => \stdClass::class
+                ],
+                "Wrong factory registered for App\Controller\YetAnotherController",
+            ],
+            [
+                [
+                    StatisticsController::class => StatisticsControllerFactory::class,
+                ],
+                "Unable instantiate controller App\Controller\YetAnotherController",
+
+            ],
+        ];
+    }
+
     public static function invalidRequestDataProvider()
     {
         return [
@@ -83,8 +110,6 @@ class RouteDispatcherTest extends TestCase
     {
         $dotEnv = Dotenv::createImmutable(__DIR__ . '/../../../../../..', '.env.test');
         $dotEnv->load();
-
-        \App\Config\Config::init();
     }
 
 
@@ -94,6 +119,8 @@ class RouteDispatcherTest extends TestCase
      */
     public function locateControllerBasicRequest($requestUri, $match): void
     {
+        \App\Config\Config::init();
+
         ob_start();
         @RouteDispatcher::dispatch($requestUri);
         $actual = ob_get_contents();
@@ -105,10 +132,51 @@ class RouteDispatcherTest extends TestCase
 
     /**
      * @test
+     * @dataProvider exceptionsDataProvider
+     */
+    public function locateControllerExceptions($factories, $exceptionMessage): void
+    {
+        $mockConfiguration = [
+            "routes" => [
+                '/' => "App\Controller\IndexController@indexAction",
+                '/404' => "App\Controller\ErrorController@notFoundAction",
+                '/statistics' => "App\Controller\StatisticsController@indexAction",
+                '/yet-another-route' => "App\Controller\YetAnotherController@indexAction",
+            ],
+            'controllers' => [
+                'invokables' => [
+                    IndexController::class,
+                    ErrorController::class,
+                ],
+                'factories' => $factories,
+            ],
+        ];
+
+        $conf = m::mock('overload:\App\Config\Config')->makePartial();
+
+        $conf->shouldReceive('get')
+            ->andReturnUsing(function ($key) use ($mockConfiguration) {
+                return $mockConfiguration[$key];
+            });
+
+        $conf->shouldReceive('init')->andReturnSelf();
+
+        \App\Config\Config::init();
+
+        $requestUri = "/yet-another-route?month=April, 2022";
+        $this->expectException(\RuntimeException::class);
+        $this->expectExceptionMessage($exceptionMessage);
+        @RouteDispatcher::dispatch($requestUri);
+    }
+
+    /**
+     * @test
      * @dataProvider invalidRequestDataProvider
      */
     public function locateControllerInvalidRequest($requestUri, $match): void
     {
+        \App\Config\Config::init();
+
         ob_start();
         @RouteDispatcher::dispatch($requestUri);
         $actual = ob_get_contents();
@@ -124,6 +192,8 @@ class RouteDispatcherTest extends TestCase
      */
     public function locateControllerAvgStatsRequests($requestUri, $expected): void
     {
+        \App\Config\Config::init();
+
         ob_start();
         @RouteDispatcher::dispatch($requestUri);
         $actual = ob_get_contents();
@@ -150,8 +220,7 @@ class RouteDispatcherTest extends TestCase
 
             if ($statsName === StatsEnum::TOTAL_POSTS_PER_WEEK) {
                 $this->assertGreaterThanOrEqual(0, count($data["children"]), $statsName);
-            }
-            else {
+            } else {
                 $this->assertGreaterThanOrEqual(0, $data["value"], $statsName);
             }
         }
