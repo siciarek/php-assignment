@@ -8,6 +8,11 @@ use Psr\SimpleCache\CacheInterface;
 
 class MockCache implements CacheInterface {
     /**
+     * @var array
+     */
+    private $data = [];
+
+    /**
      * Fetches a value from the cache.
      *
      * @param string $key     The unique key of this item in the cache.
@@ -19,7 +24,13 @@ class MockCache implements CacheInterface {
      *   MUST be thrown if the $key string is not a legal value.
      */
     public function get(string $key, mixed $default = null): mixed {
-        return "smslt_a960c7e40fa5bd_761d6fc0ffe";
+        if ($key == "ace66bec4a28e30f091fede4071a6030") {
+            return json_encode(["message" => "OK"]);
+        }
+        if (array_key_exists($key, $this->data)) {
+            return $this->data[$key];
+        }
+        return null;
     }
 
     /**
@@ -37,6 +48,7 @@ class MockCache implements CacheInterface {
      *   MUST be thrown if the $key string is not a legal value.
      */
     public function set(string $key, mixed $value, null|int|\DateInterval $ttl = null): bool {
+        $this->data[$key] = $value;
         return true;
     }
 
@@ -51,6 +63,7 @@ class MockCache implements CacheInterface {
      *   MUST be thrown if the $key string is not a legal value.
      */
     public function delete(string $key): bool {
+        unset($this->data[$key]);
         return true;
     }
 
@@ -60,6 +73,7 @@ class MockCache implements CacheInterface {
      * @return bool True on success and false on failure.
      */
     public function clear(): bool {
+        $this->data = [];
         return true;
     }
 
@@ -128,6 +142,6 @@ class MockCache implements CacheInterface {
      *   MUST be thrown if the $key string is not a legal value.
      */
     public function has(string $key): bool {
-        return false;
+        return array_key_exists($key, $this->data);
     }
 }

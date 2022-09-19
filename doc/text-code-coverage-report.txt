@@ -1,12 +1,12 @@
 
 
-Code Coverage Report:      
-  2022-09-19 09:04:29      
-                           
- Summary:                  
-  Classes: 96.88% (31/32)  
-  Methods: 94.74% (90/95)  
-  Lines:   95.28% (323/339)
+Code Coverage Report:       
+  2022-09-19 10:04:02       
+                            
+ Summary:                   
+  Classes: 100.00% (32/32)  
+  Methods: 100.00% (95/95)  
+  Lines:   100.00% (346/346)
 
 App\Config\Config
   Methods: 100.00% ( 2/ 2)   Lines: 100.00% (  9/  9)
@@ -29,7 +29,7 @@ SocialPost\Client\Factory\FictionalClientFactory
 SocialPost\Client\FictionalClient
   Methods: 100.00% ( 6/ 6)   Lines: 100.00% ( 24/ 24)
 SocialPost\Client\SocialClientCacheDecorator
-  Methods:  16.67% ( 1/ 6)   Lines:  15.79% (  3/ 19)
+  Methods: 100.00% ( 6/ 6)   Lines: 100.00% ( 26/ 26)
 SocialPost\Driver\Factory\FictionalDriverFactory
   Methods: 100.00% ( 1/ 1)   Lines: 100.00% (  7/  7)
 SocialPost\Driver\FictionalDriver
