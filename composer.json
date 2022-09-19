@@ -21,8 +21,7 @@
         "phpunit/phpunit-selenium": "*",
         "php-webdriver/webdriver": "*",
         "phpunit/php-code-coverage": "*",
-        "mockery/mockery": "*",
-        "php-mock/php-mock-phpunit": "*"
+        "mockery/mockery": "*"
     },
     "autoload": {
         "psr-4": {

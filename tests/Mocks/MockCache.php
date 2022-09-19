@@ -24,9 +24,6 @@ class MockCache implements CacheInterface {
      *   MUST be thrown if the $key string is not a legal value.
      */
     public function get(string $key, mixed $default = null): mixed {
-        if ($key == "ace66bec4a28e30f091fede4071a6030") {
-            return json_encode(["message" => "OK"]);
-        }
         if (array_key_exists($key, $this->data)) {
             return $this->data[$key];
         }

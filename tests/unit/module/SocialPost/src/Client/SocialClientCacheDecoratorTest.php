@@ -17,8 +17,6 @@ use Tests\Mocks\MockCache;
  */
 class SocialClientCacheDecoratorTest extends TestCase
 {
-
-
     public function sendMockRequest(\GuzzleHttp\Psr7\Request $request) {
         $path = $request->getUri()->getPath();
 
@@ -26,24 +24,7 @@ class SocialClientCacheDecoratorTest extends TestCase
             return new \GuzzleHttp\Psr7\Response(200, [], null);
         }
 
-        $respData = [1, 2, 3];
-        return new \GuzzleHttp\Psr7\Response(200, [], json_encode($respData));
-
-        if (empty($path)) {
-            return new \GuzzleHttp\Psr7\Response(200, [], "Request completed successfully.");
-        }
-
-        $exceptionData = ["error" => ["message" => "Unexpected Exception"]];
-
-        if ($path === "/invalid-token") {
-            $exceptionData = ["error" => ["message" => "Invalid SL Token"]];
-        }
-        $response = new \GuzzleHttp\Psr7\Response(200, [], json_encode($exceptionData));
-        throw new ServerException(
-            "Unexpected Exception.",
-            $request,
-            $response,
-        );
+        return new \GuzzleHttp\Psr7\Response(200, [], json_encode(["message" => "OK"]));
     }
 
     public function setUp(): void
@@ -112,6 +93,8 @@ class SocialClientCacheDecoratorTest extends TestCase
 
         $url = "http://localhost/statis";
         $parameters = [];
+        $result = $this->decorator->get($url, $parameters);
+        $this->assertNotNull($result);
         $result = $this->decorator->get($url, $parameters);
         $this->assertNotNull($result);
     }

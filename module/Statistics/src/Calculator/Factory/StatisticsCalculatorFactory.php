@@ -20,7 +20,6 @@ use Statistics\Enum\StatsEnum;
  */
 class StatisticsCalculatorFactory
 {
-
     private const CALCULATOR_CLASS_MAP = [
         StatsEnum::AVERAGE_POST_LENGTH          => AveragePostLength::class,
         StatsEnum::MAX_POST_LENGTH              => MaxPostLength::class,
