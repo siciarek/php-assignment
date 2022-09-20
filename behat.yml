@@ -3,10 +3,17 @@ default:
         Behat\MinkExtension:
             # Set the base_url to match your environment setup
             base_url: http://localhost:7777
+            default_session: selenium2
             javascript_session: selenium2
-            browser_name: 'chrome'
+            browser_name: "chrome"
             selenium2:
-                capabilities: { "browserName": "chrome", "browser": "chrome", "version": "62", 'chrome': {'switches':['--no-sandbox', '--headless']}}
+                capabilities:
+                    browserName: "chrome" 
+                    browser: "chrome"
+                    chrome: 
+                        switches:
+                            - "--no-sandbox"
+                            - "--headless"
     suites:
         default:
             contexts:

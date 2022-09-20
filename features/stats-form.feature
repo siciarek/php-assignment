@@ -1,4 +1,3 @@
-@javascript
 Feature: Stats form usage
   As Supermetrics user
   I should be able select months and see statistics
@@ -15,7 +14,6 @@ Feature: Stats form usage
     And I press "Show statistics"
     And I wait 10 seconds
     Then I should see "Average number of posts per user in a given month"
-    And I should see "410.22 characters"
   
   Scenario Outline: Select specific months
     Given I am on "/"
@@ -25,6 +23,10 @@ Feature: Stats form usage
     Then I should see "Average number of posts per user in a given month"
 
     Examples:
-    | month          | 
-    | "April, 2022"  |
-    | "May, 2022"    |
+    | month             | 
+    | "April, 2022"     |
+    | "May, 2022"       |
+    | "June, 2022"      |
+    | "July, 2022"      |
+    | "August, 2022"    |
+    | "September, 2022" |
