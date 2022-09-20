@@ -15,12 +15,35 @@
     echo $row['username'] . "\n";
     
     
-$database = new DataBase('localhost', 'root', 'sldjfpoweifns', 'my_database')
-$repo = new UserRepository($database);
 
-$masterEmail = 
-$user    
+$masterEmail = MasterEmail::email();
+echo "The master email is {$masterEmail}\n";
+
+if ($masterEmail !== MasterEmail::UNKNOWN_EMAIL) {
+    $database = new DataBase('localhost', 'root', 'sldjfpoweifns', 'my_database')
+    $user = (new UserRepository($database))->fetchOneByEmail($masterEmail);
     
+    if (typeof($user) === User::class) {
+        echo $user->getUsername() . "\n";
+    }
+}
+
+
+class MasterEmail {
+    const UNKNOWN_EMAIL = "unknown";
+
+    public static function email() 
+    {
+        foreach(["email", "masterEmail"] as $key) {
+            $email = Request::get($key);
+            if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                return $email;
+            }        
+        }
+        return self::UNKNOWN_EMAIL;
+    }
+}
+
 class Request {
     public static function get($key) {
         if (array_key_exists($key, $_REQUEST)) {
@@ -47,6 +70,10 @@ class UserRepository {
         $query = sprintf("SELECT `id`, `username`, `email` FROM `%s` WHERE `email` = '%s'", self::TABLE_NAME, $email);
         $result = $this->database->getOne($query);
         
+        if (empty($result)) {
+            return null;
+        }
+        
         return new User($result["id"], $result["email"], $result["username"])
     }
 }
@@ -64,6 +91,7 @@ class User {
     # TODO: add setters and getters
 }
 
+# TODO: use as singletone
 class DataBase {
     private $connection;
     
