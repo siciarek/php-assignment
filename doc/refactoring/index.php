@@ -7,7 +7,8 @@ use App\Helper\MasterEmail;
 
 # Usually the following logic should be moved to Dispatcher than to Controller
 # But there is no information about the url and path so I have decided
-# to create something simple in front controller.
+# to create something simple in front controller, Of course if project will
+# expand moving the logic to the right place is pretty straight forward.
 
 $masterEmail = MasterEmail::email($_REQUEST);
 echo "The master email is $masterEmail\n";
