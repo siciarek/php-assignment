@@ -11,6 +11,18 @@ services:
       target: local
     ports:
       - "7777:80"
+    volumes:
+      - "./tests/:/app/tests/"
+      - "./composer.json:/app/composer.json"
+      - "./composer.lock:/app/composer.lock"
+      - "./phpunit.xml:/app/phpunit.xml"
+      - "./.env:/app/.env"
+      - "./.env.test:/app/.env.test"
+      - "./doc/:/app/doc/"
+      - "./module/:/app/module/"
+      - "./features/:/app/features/"
+      - "./behat.yml:/app/behat.yml"
+      - "./vendor/:/app/vendor/"
 
 networks:
   default:

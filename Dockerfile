@@ -10,11 +10,13 @@ LABEL vendor="Supermetrics"
 ENV TZ="UTC"
 ENV APACHE_DOCUMENT_ROOT="/app/public"
 
-RUN apt-get update -y \
-    && apt-get upgrade -y \
-    && apt-get install -y git memcached libmemcached-dev libmemcached-tools libzip-dev unzip
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+    git memcached libmemcached-dev libmemcached-tools libzip-dev unzip
 
 RUN pecl install memcached
+#pecl/memcached can optionally use PHP extension "igbinary" (version >= 2.0)
+#pecl/memcached can optionally use PHP extension "msgpack" (version >= 2.0)
 
 RUN a2enmod rewrite
 
@@ -39,5 +41,5 @@ FROM base as local
 ENV PHP_IDE_CONFIG="serverName=sm_assignment"
 ENV APP_ENV="local"
 
-#RUN pecl install -f xdebug \
-#    && docker-php-ext-enable xdebug
+RUN pecl install -f xdebug \
+    && docker-php-ext-enable xdebug

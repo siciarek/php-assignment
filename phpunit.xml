@@ -1,21 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<phpunit backupGlobals="false"
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd"
+         backupGlobals="false"
          backupStaticAttributes="false"
          bootstrap="vendor/autoload.php"
          colors="true"
          convertErrorsToExceptions="true"
-         convertNoticesToExceptions="true"
-         convertWarningsToExceptions="true"
+         convertNoticesToExceptions="false"
+         convertWarningsToExceptions="false"
          processIsolation="false"
-         stopOnFailure="false">
+         stopOnFailure="false"
+         forceCoversAnnotation="true">
+    <coverage>
+        <include>
+            <directory suffix=".php">module</directory>
+        </include>
+        <exclude>
+            <!-- Strange behaviour. Line 11 in the following file is marked as uncovered. -->
+            <file>module/App/config/controllers.php</file>
+        </exclude>
+        <report>
+            <html outputDirectory="doc/html-code-coverage-report/" lowUpperBound="75" highLowerBound="95"/>
+            <text outputFile="doc/text-code-coverage-report.txt" showUncoveredFiles="true" showOnlySummary="false"/>
+        </report>
+    </coverage>
+
     <testsuites>
         <testsuite name="unit">
-            <directory suffix="Test.php">./tests/unit</directory>
+            <directory>tests</directory>
         </testsuite>
     </testsuites>
-    <filter>
-        <whitelist processUncoveredFilesFromWhitelist="true">
-            <directory suffix=".php">./app</directory>
-        </whitelist>
-    </filter>
 </phpunit>
